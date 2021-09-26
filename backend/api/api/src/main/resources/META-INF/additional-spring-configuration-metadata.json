@@ -1,0 +1,59 @@
+{
+  "properties": [
+    {
+      "name": "file-location",
+      "type": "java.lang.String",
+      "description": "Dictates where an uploaded file should be saved."
+    },
+    {
+      "name": "serve-path",
+      "type": "java.lang.String",
+      "description": "Describes where an uploaded file will be served."
+    },
+    {
+      "name": "application-version",
+      "type": "java.lang.String",
+      "description": "The current application version number."
+    },
+    {
+      "name": "secret",
+      "type": "java.lang.String",
+      "description": "The secret used to encrypt JWT tokens."
+    },
+    {
+      "name": "trust.store",
+      "type": "java.lang.String",
+      "description": "The location for the SSL trust store."
+    },
+    {
+      "name": "trust.store.password",
+      "type": "java.lang.String",
+      "description": "The password for the SSL trust store."
+    },
+    {
+      "name": "jwt-session-type",
+      "type": "java.lang.String",
+      "description": "Key for the jwt-session-type."
+    },
+    {
+      "name": "eid.discovery-url",
+      "type": "java.lang.String",
+      "description": "The url on which EID endpoints can be found."
+    },
+    {
+      "name": "mail.origin",
+      "type": "java.lang.String",
+      "description": "The mailadress the mails sent by the server originates from."
+    },
+    {
+      "name": "fronted.proposal.href.format",
+      "type": "java.lang.String",
+      "description": "The url people should be pointed towards when sending them to a certain proposal, include '%d' at the location of the id."
+    },
+    {
+      "name": "mail.enable",
+      "type": "java.lang.Boolean",
+      "defaultValue": true,
+      "description": "Enables the sending of mails."
+    }
+  ] }

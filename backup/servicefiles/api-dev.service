@@ -1,0 +1,16 @@
+[Unit]
+Description=Selab api-dev server
+
+[Service]
+EnvironmentFile=-/etc/default/apidev
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+Environment=SERVER_PORT=9090
+SyslogIdentifier=Selab-API-DEV-server
+ExecStart=/usr/bin/java -jar /selabrepo-back-dev/backend/api/api/target/api.jar
+WorkingDirectory=/selabrepo-back-dev/backend/api/api/target/
+
+[Install]
+WantedBy=multi-user.target
+

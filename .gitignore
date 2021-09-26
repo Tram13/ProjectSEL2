@@ -1,0 +1,8 @@
+.idea/
+./backend/api/api/mvnw
+lib/
+package-lock.json
+.coverage/
+./frontend/package-lock.json
+*.scannerwork/
+*coverage/

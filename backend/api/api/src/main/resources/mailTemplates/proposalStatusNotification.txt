@@ -1,0 +1,9 @@
+Beste Mijnheer/Mevrouw,
+
+Uw aanvraag "%1$s", werd zojuist geüpdate tot de status %2$s.
+
+Meer informatie op: %3$s.
+
+Vriendelijke groeten,
+
+Het Selab2 groep 2 team

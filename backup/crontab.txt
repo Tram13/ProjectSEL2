@@ -1,0 +1,19 @@
+# Edit this file to introduce tasks to be run by cron.
+# m h  dom mon dow   command
+
+# email failed commands to ...
+MAILTO="tibo.vanheule@ugent.be,Jonas.Desloovere@UGent.be,Lotte.VanParijs@UGent.be"
+# controleer ssl certificaat
+0 0 * * * /root/getssl -u -a --quiet
+# controleer ngninx 
+0 0 * * * /etc/ngnix_check
+# Maak backup van alle configs
+30 0 * * * /backup/backup/backup.sh > /dev/null
+# zet verslagen online, enkel mail on eroor
+10 14 * * * cd /selabrepo/vergaderingen &&  cp * /selab/static/vergaderingen/ > /dev/null
+# zet de permissions in orde voor jenkins
+*/5 * * * * chown jenkins:jenkins /selabrepo-front-dev/ -R
+*/5 * * * * chown jenkins:jenkins /selabrepo/ -R
+*/5 * * * * chown jenkins:jenkins /selabrepo-back-dev/ -R
+
+0 0 * * * cd /backup/database/src/code/ && chmod +x /backup/database/src/code/backup_database.sh && /backup/database/src/code/backup_database.sh > /dev/null

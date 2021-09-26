@@ -1,0 +1,15 @@
+[Unit]
+Description=Selab api server
+
+[Service]
+EnvironmentFile=-/etc/default/api
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=Selab-API-server
+ExecStart= /usr/bin/java -jar /selabrepo/backend/api/api/target/api.jar
+WorkingDirectory=/selabrepo/backend/api/api
+
+[Install]
+WantedBy=multi-user.target
+

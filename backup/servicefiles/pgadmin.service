@@ -1,0 +1,15 @@
+[Unit]
+Description=Pgadmin4
+
+[Service]
+EnvironmentFile=-/etc/default/pgadmin
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=PGadmin
+ExecStart=/pgadmin4/bin/pgadmin4
+WorkingDirectory=/pgadmin4/
+
+[Install]
+WantedBy=multi-user.target
+

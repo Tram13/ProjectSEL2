@@ -1,0 +1,15 @@
+[Unit]
+Description=Selab data server
+
+[Service]
+EnvironmentFile=-/etc/default/selab
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=Selab-Data-server
+ExecStart=/selab/selab
+WorkingDirectory=/selab/
+
+[Install]
+WantedBy=multi-user.target
+
